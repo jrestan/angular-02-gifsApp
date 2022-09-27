@@ -8,6 +8,10 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
 })
 export class SidebarComponent implements OnInit {
 
+  buscar(termino: string){
+    //console.log(termino);
+    this.gifsService.buscarGifs(termino);
+  }
 
   get historial(): string[]{
     return this.gifsService.historial;

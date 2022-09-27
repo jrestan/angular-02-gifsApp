@@ -1,3 +1,24 @@
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus atque reprehenderit quas ut consequatur
+<!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus atque reprehenderit quas ut consequatur
     vero consequuntur assumenda esse eligendi? Explicabo nam dignissimos, fugiat deleniti repudiandae corrupti
-    placeat distinctio doloremque unde.</p>
+    placeat distinctio doloremque unde.</p> -->
+
+    <!-- <ul>
+        <li *ngFor="let item of resultados">
+            {{item.title}}
+        </li>
+    </ul> -->
+
+<div class="row">
+    <div *ngFor="let item of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        <div class="card">
+            <!-- <img src={{item.images.downsized_medium.url}} alt=""> -->
+            <img [src]="item.images.downsized_medium.url" [alt]="item.title" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{item.title}}
+                    <!-- {{item.images.downsized_medium.url}} -->
+                </p>  
+            </div>
+        </div>
+    </div>
+</div>
